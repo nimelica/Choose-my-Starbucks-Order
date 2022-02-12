@@ -3,9 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Random Drink</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
     </head>
     <body>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUHtlEA6iTh4FSSrLfutgF0Y1ImvqVkSg-daqRU5sVCp9mlPvSXzYbsRQUrPDstEt4X8&usqp=CAU">
+        <img src="https://www.freepngimg.com/download/starbucks/74799-coffee-frappuccino-starbucks-drawing-free-hd-image.png">
         <br>
         <form action="hello" method="post">
             {% for message in get_flashed_messages()%}

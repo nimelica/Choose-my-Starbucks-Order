@@ -10,7 +10,7 @@ def index():
 
 @app.route('/hello', methods=['GET', 'POST'])
 def hello():
-    flash('Hi ' + str(request.form['name_input']).capitalize() + "! time to choose your drink!")
+    flash('Hi ' + str(request.form['name_input']).capitalize() + "! Time to choose your drink!")
     return render_template("index.html")
 
 
