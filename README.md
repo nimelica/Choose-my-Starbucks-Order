@@ -4,5 +4,5 @@ Difficult to decide what to order from Starbucks? No worries! The "Choose My Sta
 
 This project is getting data from [Mock Starbucks API](https://github.com/nimelica/Mock-Starbucks-API) and gives you a random drink name every time to save you thinking about what to drink today!
 
-![example](https://user-images.githubusercontent.com/76903207/153773995-416fe8f0-81d5-4341-b46e-30ea25d184a8.png =250x300)
+![example](https://user-images.githubusercontent.com/76903207/153773995-416fe8f0-81d5-4341-b46e-30ea25d184a8.png | width=100)
 
