@@ -10,7 +10,6 @@ if response.status_code == 200:
 elif response.status_code == 404:
     print('Not Found.')
 
-
 # Convert bytes into a JSON list data
 drinks = response.json()
 
@@ -22,9 +21,12 @@ cursor = connection.cursor()
 
 # Create table/s for our database
 cursor.execute("create table drinks (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)")
+
+# Fill that table
 for i in range(len(drinks)):
   cursor.execute("insert into drinks (name) values (?)",[drinks[i]])
   print("added ", drinks[i])
+  # all_drinks = cursor.fetchall()
 
 
 # Do not forget to save (commit) and close the database connection
