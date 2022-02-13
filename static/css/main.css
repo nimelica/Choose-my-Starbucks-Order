@@ -31,19 +31,14 @@ input:focus {
     outline: none;
 }
 
-#hello {
+#enter_button {
     background-color: palevioletred;
     color: white;
     width: 200px;
 }
 
-#hello:hover{
+#enter_button:hover{
     background-color: mediumvioletred;
     cursor: pointer;
 }
 
-#your_drink {
-    background-color: palevioletred;
-    color: white;
-    width: 200px;
-}

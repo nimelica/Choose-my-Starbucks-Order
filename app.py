@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, g, session
+from flask import Flask, render_template, request, flash, g
 import sqlite3, random
 
 # Create instance of Flask by calling its class constructor
@@ -8,21 +8,14 @@ app.secret_key = "12ev@0947!fBjs8AA#4$32jHbd_sjhAdhc%mhn_773gvPPahG/HSI*IH_jbs"
 # Main page
 @app.route('/', methods=['GET'])
 def index():
-    flash("Hello! What's your name?")
-    return render_template("index.html")
-
-# When user enter her/his name
-@app.route('/hello', methods=['GET', 'POST'])
-def hello():
-    flash('Hi ' + str(request.form['name_input']).capitalize() + "! Feeling Lucky? Click the Button and See!")
+    flash("Click the button! Get your drink!")
     return render_template("index.html")
 
 
-@app.route('/your_drink')
+@app.route('/your_drink', methods=['GET', 'POST'])
 def your_drink():
     item = get_db()
-    flash(str(item).capitalize())
-    return render_template("index.html")
+    return render_template("index.html", item=item)
 
 
 # Managing database connection

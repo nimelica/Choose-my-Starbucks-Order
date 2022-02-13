@@ -6,27 +6,16 @@
         <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
     </head>
     <body>
-       
+       <div>
+        <marquee direction="right" behavior="alternate" style="border:papayawhip 10px SOLID"><h3 style="color:powderblue;"><b>Get Your Random Starbucks!</b></h3></marquee>
+
+       </div>
         <img src="https://www.freepngimg.com/download/starbucks/74799-coffee-frappuccino-starbucks-drawing-free-hd-image.png" alt="starbucks cups icon">
         <br>
-        <form action="hello" method="post">
-            {% for message in get_flashed_messages()%}
-               <p>{{message}}</p>
-            {% endfor %}
+        <form action="/your_drink" method="post">
+               <p><h3 style="color:powderblue;">{{ item }}</h3></p>
             <br>
-              <input type="text" name="name_input">
-            <br>
-              <input type ="submit" value="ENTER" id="hello">
-
-              <form action ='your_drink' method="post">
-                {% for message in get_flashed_messages()%}
-                   <p>{{message}}</p>
-                {% endfor %} 
-                <br>
-                  <input type ="submit" value="ENTER" id="your_drink">
-            </form>
-
-
+              <input type ="submit" value="ENTER" id="enter_button">
         </form>
 
     </body>
