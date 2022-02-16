@@ -1,9 +1,11 @@
-from flask import Flask, render_template, request, flash, g
+from flask import Flask, render_template, request, session, flash, g
 import sqlite3, random
 
 # Create instance of Flask by calling its class constructor
 app = Flask(__name__)
 app.secret_key = "12ev@0947!fBjs8AA#4$32jHbd_sjhAdhc%mhn_773gvPPahG/HSI*IH_jbs"
+# Session data is stored at the top of the cookie
+app.config['SESSION_COOKIE_NAME'] = "75jhbkdaCooKiebMONsteRRs!7)^&hbsh$4)"
 
 # Main page
 @app.route('/', methods=['GET'])
